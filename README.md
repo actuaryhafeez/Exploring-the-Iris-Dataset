@@ -27,3 +27,29 @@ The purpose of this project is to demonstrate the use of logistic regression for
     flask run
 ### Open a web browser and navigate to http://localhost:5000 to access the home page of the application.
 ### Enter the measurements for an iris flower in the form and click "Predict" to see the predicted species.
+![flask_iris](https://user-images.githubusercontent.com/55107467/232926204-d4ec3609-a7a0-4617-bc04-dc177c6e5ab1.png)
+
+## Project Structure 
+
+Exploring-the-Iris-Dataset/
+    |- data/
+    |   |- iris.csv
+    |
+    |- model/
+    |   |- iris_model.pkl
+    |
+    |- static/
+    |   |- iris.png
+    |
+    |- templates/
+    |   |- home.html
+    |
+    |- app.py
+    | - notebook.ipynb
+    | - requirements.txt
+    |- README.md
+
+
+
+
+
