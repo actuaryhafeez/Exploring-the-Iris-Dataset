@@ -31,25 +31,24 @@ The purpose of this project is to demonstrate the use of logistic regression for
 
 ## Project Structure 
 
-Exploring-the-Iris-Dataset/
-    |- data/
-    |   |- iris.csv
-    |
-    |- model/
-    |   |- iris_model.pkl
-    |
-    |- static/
-    |   |- iris.png
-    |
-    |- templates/
-    |   |- home.html
-    |
-    |- app.py
-    | - notebook.ipynb
-    | - requirements.txt
-    |- README.md
+    Exploring-the-Iris-Dataset/
+        ├── data/
+        │   └── iris.csv
+        ├── model/
+        │   └── iris_model.pkl
+        ├── static/
+        │   └── iris.png
+        └── templates/
+        |   └── home.html
+        ├── app.py/
+        │  
+        ├── notebook.ipynb/
+        ├── requirements.txt/
+        ├── README.md/
 
+## License
 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-
+This project adheres to the [Open Source Initiative's](https://opensource.org) definition of open source software and the [Open Source Initiative's Approved License List](https://opensource.org/licenses/alphabetical).
 
