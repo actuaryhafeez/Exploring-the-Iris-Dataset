@@ -13,10 +13,17 @@ The logistic regression model is used to predict the species of an iris flower b
 The purpose of this project is to demonstrate the use of logistic regression for classification tasks, as well as provide an example of how to build a simple Flask application for deploying a machine learning model.
 
 # Installation
-To install and run this application, follow these steps:
+## To install and run this application, follow these steps:
 
-Clone the repository to your local machine.
-Install the necessary dependencies by running the command pip install -r requirements.txt.
-Start the Flask server by running the command python app.py in the terminal.
-Open a web browser and navigate to http://localhost:5000 to access the home page of the application.
-Enter the measurements for an iris flower in the form and click "Predict" to see the predicted species.
+### Clone the repository to your local machine.
+    https://github.com/actuaryhafeez/Exploring-the-Iris-Dataset.git
+### Create a new virtual environment in the project directory.
+    python3 -m venv venv
+### Activate the virtual environment.
+    source venv/bin/activate
+### Install the necessary dependencies by running the command 
+    pip install -r requirements.txt.
+### Start the Flask server by running the command python app.py in the terminal.
+    flask run
+### Open a web browser and navigate to http://localhost:5000 to access the home page of the application.
+### Enter the measurements for an iris flower in the form and click "Predict" to see the predicted species.
