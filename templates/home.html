@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Species Predictor</title>
+    <style>
+        body {
+            text-align: center; /* Center all elements inside the body */
+        }
+        
+        h1 {
+            margin-top: 50px; /* Add some space between the top of the page and the title */
+        }
+        
+        form {
+            margin-top: 50px; /* Add some space between the title and the form */
+            display: inline-block; /* Make the form inline so that it centers horizontally */
+            text-align: left; /* Align the form elements to the left */
+        }
+    </style>
+</head>
+<body>
+    <h1>Iris Species Predictor</h1>
+    <img src="{{ url_for('static', filename='iris.png') }}" alt="Iris" style="max-width: 100%; height: auto; border: 1px solid black;">
+    <form id="prediction-form">
+        <label for="sepal-length">Sepal Length:</label>
+        <input type="text" name="sepal-length" id="sepal-length"><br>
+        <label for="sepal-width">Sepal Width:</label>
+        <input type="text" name="sepal-width" id="sepal-width"><br>
+        <label for="petal-length">Petal Length:</label>
+        <input type="text" name="petal-length" id="petal-length"><br>
+        <label for="petal-width">Petal Width:</label>
+        <input type="text" name="petal-width" id="petal-width"><br>
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    <div id="prediction-result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#prediction-form').submit(function(event) {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/predict',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        'sepal_length': $('#sepal-length').val(),
+                        'sepal_width': $('#sepal-width').val(),
+                        'petal_length': $('#petal-length').val(),
+                        'petal_width': $('#petal-width').val()
+                    }),
+                    success: function(response) {
+                        $('#prediction-result').text('Predicted species: ' + response.prediction);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
